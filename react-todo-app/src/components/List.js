@@ -23,14 +23,13 @@ const List = React.memo( ({todoData,id,title,completed,setTodoData,provided,snap
         setEditedTitle(e.target.value);
     };
 
-    const handleSubmit = (event) =>{
-        event.preventDefault();
+    const handleSubmit = () =>{
 
-        let newTodoData = todoData.map(data => {
+        let newTodoData = todoData.map((data) => {
             if(data.id === id){
-                data.title === editedTitle;
+                data.title = editedTitle;
             }
-            return data;
+            return (data);
         });
         setTodoData(newTodoData)
         setIsEditing(false);
