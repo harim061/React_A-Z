@@ -33,7 +33,7 @@ const List = React.memo( ({todoData,id,title,completed,setTodoData,provided,snap
         });
         setTodoData(newTodoData)
         setIsEditing(false);
-    };
+    };  
 
     if (isEditing) {
         return (
