@@ -29,7 +29,7 @@ const List = React.memo( ({todoData,id,title,completed,setTodoData,provided,snap
             if(data.id === id){
                 data.title = editedTitle;
             }
-            return (data);
+            return (data); 
         });
         setTodoData(newTodoData)
         setIsEditing(false);
